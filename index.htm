@@ -1,0 +1,58 @@
+<!----------------------------------------- 
+htm fajl je rađen za potrebe članka u Svetu Kompjutera.
+Kod je jednim delom modifikacija projekta koji možete naći na www.tehnopage.ru/ethernet-arduino-control
+Skeč da bi se pravilno upotrebio, pored ino fajla potrebno je preuzeti i komplet web fajlova koji treba da budu snimljeni na mikro SD kartici
+16 novembar 2017
+Petrović Dejan
+------------------------------------------->
+<html>
+<head>
+  <meta http-equiv='content-type' content='text/html; charset=UTF-8'>
+  <title>Arduino online</title>
+ <link type="text/css" rel="StyleSheet" href="main.css" />
+ <script>
+function GetDHTState() {
+nocache = "&nocache=" + Math.random() * 1000000;
+var request = new XMLHttpRequest();
+request.onreadystatechange = function() {
+if (this.readyState == 4) {
+if (this.status == 200) {
+if (this.responseText != null) {
+var arrayOfStrings = this.responseText.split(":");
+
+document.getElementById("tp").innerHTML = arrayOfStrings[0];
+document.getElementById("vl").innerHTML = arrayOfStrings[1];
+
+}
+}
+}
+}
+request.open("GET", "ajaxDHT" + nocache, true);
+request.send(null);
+setTimeout('GetDHTState()', 1000);
+}
+
+</script>
+</head>
+
+<body onLoad="GetDHTState()">
+  <div class="wrapper">
+    <h2>Arduino online</h2>
+    <hr>
+    
+    <div class="kontejner">
+    <div class="logo"><img src='temp.png' /></div>
+    <div class="reading">Temperatura: <span id="tp">0</span> °C</div>
+    </div>
+
+    <div class="kontejner">
+    <div class="logo"><img src='vlaga.png' /></div>
+    <div class="reading">Vlažnost vazduha: <span id="vl">0</span> %</div>
+    </div>
+	<hr>
+	<p>Svet Kompjutera 01/2018</p>
+    
+    <br>
+</div>
+    </Body>
+</html>

@@ -1,0 +1,31 @@
+/*----------------------------------------- 
+css fajl je rađen za potrebe članka u Svetu Kompjutera.
+Kod je jednim delom modifikacija projekta koji možete naći na www.tehnopage.ru/ethernet-arduino-control
+Skeč da bi se pravilno upotrebio, pored ino fajla potrebno je preuzeti i komplet web fajlova koji treba da budu snimljeni na mikro SD kartici
+16 novembar 2017
+Petrović Dejan
+-------------------------------------------*/
+body {
+  font-family: Arial;
+  color: #333;
+  text-align: center
+}
+.wrapper {
+  margin: 0 auto; 
+  width: 500px;
+  height: 350px;
+  border: 3px solid  #333;
+  background: #CCC;
+}
+h2 {
+  font-weight: normal;
+  margin: 20px;
+}
+.logo img{
+	width: 40px;
+    display: block;
+    margin: 0 auto;
+}
+.reading {
+	margin: 20px 0 20px 0;
+}
