@@ -1,9 +1,11 @@
 /*----------------------------------------- 
-ino fajl je rađen za potrebe članka u Svetu Kompjutera.
-Kod je jednim delom modifikacija projekta koji možete naći na www.tehnopage.ru/ethernet-arduino-control
-Skeč da bi se pravilno upotrebio, pored ino fajla potrebno je preuzeti i komplet web fajlova koji treba da budu snimljeni na mikro SD kartici
-16 novembar 2017
-Petrović Dejan
+ * ino fajl je rađen za potrebe članka u Svetu Kompjutera.
+ * Kod je jednim delom modifikacija projekta koji možete naći na www.tehnopage.ru/ethernet-arduino-control
+ * Skeč da bi se pravilno upotrebio, pored ino fajla potrebno je preuzeti i komplet web fajlova koji treba da 
+   budu snimljeni na mikro SD kartici
+ * Author: Petrović Dejan
+ * Date  : 16 novembar 2017
+ * Arduino UNO, Ethernet shield, DHT22
 -------------------------------------------*/
 #include <DHT.h>
 #include <SPI.h>
